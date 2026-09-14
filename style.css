@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  color-scheme: dark;
+  font-family: 'Space Mono', monospace;
+  background: #080808;
+  color: #f2f0e9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 50%, #1b1b1a 0, #0c0c0c 42%, #030303 100%);
+}
+
+#answer {
+  font-size: clamp(8rem, 34vw, 42rem);
+  line-height: 0.8;
+  font-weight: 700;
+  letter-spacing: -0.09em;
+  transform: translateX(-0.045em);
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #answer {
+    animation: arrive 900ms cubic-bezier(.2, .75, .25, 1) both;
+  }
+}
+
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateX(-0.045em) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-0.045em) scale(1);
+  }
+}
